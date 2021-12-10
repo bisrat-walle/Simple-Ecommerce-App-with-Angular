@@ -1,4 +1,4 @@
-<form (ngSubmit)="updateProduct(f)" #f=ngForm>
+<form id="update" (ngSubmit)="updateProduct(f)" #f=ngForm>
     <div class="form-group">
       <label for="exampleInputEmail1">Product Name</label>
       <input ngModel name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="product name" placeholder="Enter Product Name">
@@ -12,4 +12,28 @@
       <label class="form-check-label" for="exampleCheck1">I am sure, update the product</label>
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Update</button>
+  </form>
+
+  <form id="add" (ngSubmit)="add(a)" #a=ngForm>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Product Name</label>
+      <input ngModel name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="product name" placeholder="Enter Product Name">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Price</label>
+      <input ngModel name="price" type="number" class="form-control" id="exampleInputPassword1" placeholder="Price">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">ID</label>
+        <input ngModel name="id" type="number" class="form-control" id="exampleInputPassword1" placeholder="Price">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input ngModel name="des" type="text" class="form-control" id="exampleInputPassword1" placeholder="Price">
+      </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">I am sure, update the product</label>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Add</button>
   </form>

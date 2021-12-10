@@ -33,7 +33,7 @@ export class ProductComponent implements OnInit {
 
 
   add(){
-    //this.router = 
+    this.router.navigateByUrl('/products/detail/' + -1);
   }
 
 

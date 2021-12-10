@@ -2,3 +2,7 @@ form{
     width: 300px;
     margin: 100px auto;
 }
+
+.hide{
+    display: none;
+}

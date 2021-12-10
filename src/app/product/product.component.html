@@ -3,7 +3,7 @@
 
 
 <div class="container">
-  <h1 *ngIf="productList.length == 0">No produts yets!</h1>
+  <h1 *ngIf="productList.length == 0">No produts yet!</h1>
 
   <div class="card" *ngFor="let product of productList" style="width: 18rem;">
     <img class="card-img-top" src="assets/pro_img.jfif" alt="Card image cap">
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <!--a class="btn btn-primary" (click)="add()">Add</a-->
+  <a style="margin: 10px auto;width:300px;max-height: 50px;" class="btn btn-primary" (click)="onViewDetail(-1)">Add</a>
 
 </div>
 

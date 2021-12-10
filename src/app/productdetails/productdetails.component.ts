@@ -19,12 +19,31 @@ export class ProductdetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(
       param => {
-        for (let product of this.products){
-          if (product.id == param['id']){ this.selectedProduct = product; }
+        if (param['id'] == -1){
+          document.getElementById("update")?.classList.add("hide");
+          document.getElementById("add")?.classList.remove("hide");
+        } else{
+          document.getElementById("update")?.classList.remove("hide");
+          document.getElementById("add")?.classList.add("hide");
+
+          
+            for (let product of this.products){
+              if (product.id == param['id']){ this.selectedProduct = product; }
+            }
+
         }
 
       })
     }
+
+    product2: Product = {
+      id: -1,
+      name: '',
+      price: 2000,
+      imageUrl: 'assets/pro_img.jfif',
+      description: ''   
+    }
+  
 
     
   updateProduct(f: NgForm){
@@ -34,8 +53,19 @@ export class ProductdetailsComponent implements OnInit {
     this.router.navigateByUrl("");
   }
 
-  delete(id: number){
-    delete PRODUCTS[id-1];
+  
+
+  add(a: NgForm){
+    let n = a.value;
+
+    this.product2.id = n['id']
+    this.product2.name = n['name']
+    this.product2.description = n['des']
+    this.product2.price = n['price']
+
+    this.products.push(this.product2);
+    this.router.navigateByUrl("");
+
   }
 
   

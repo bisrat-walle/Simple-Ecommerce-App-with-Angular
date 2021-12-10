@@ -32,6 +32,11 @@ export class ProductComponent implements OnInit {
   }
 
 
+  add(){
+    //this.router = 
+  }
+
+
   productList = PRODUCTS;
 
 

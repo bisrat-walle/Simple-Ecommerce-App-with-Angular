@@ -3,6 +3,7 @@
 
 
 <div class="container">
+  <h1 *ngIf="productList.length == 0">No produts yets!</h1>
 
   <div class="card" *ngFor="let product of productList" style="width: 18rem;">
     <img class="card-img-top" src="assets/pro_img.jfif" alt="Card image cap">

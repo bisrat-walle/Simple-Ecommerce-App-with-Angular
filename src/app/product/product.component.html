@@ -1,0 +1,21 @@
+<h1>Products</h1>
+<hr>
+
+
+<div class="container">
+
+  <div class="card" *ngFor="let product of productList" style="width: 18rem;">
+    <img class="card-img-top" src="assets/pro_img.jfif" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name| uppercase}} </h5>
+      <p class="card-text" *ngIf="product.price < 10">$ {{product.price}} (*On Discount)</p>
+      <p class="card-text" *ngIf="product.price >= 10">$ {{product.price}} </p>
+      <p class="card-text">{{product.description}}</p>
+      <a href="#" class="btn btn-primary">Buy</a>
+    </div>
+  </div>
+
+</div>
+
+
+

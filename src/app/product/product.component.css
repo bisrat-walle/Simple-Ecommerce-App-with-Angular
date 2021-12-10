@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    margin: 50px 100px;
+    justify-content: space-between;
+}
+
+h1{
+    padding-top: 20px;
+    padding-left: 20px;
+}

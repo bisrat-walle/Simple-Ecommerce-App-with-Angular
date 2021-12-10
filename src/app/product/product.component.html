@@ -11,9 +11,12 @@
       <p class="card-text" *ngIf="product.price < 10">$ {{product.price}} (*On Discount)</p>
       <p class="card-text" *ngIf="product.price >= 10">$ {{product.price}} </p>
       <p class="card-text">{{product.description}}</p>
-      <a class="btn btn-primary" (click)="onViewDetail(product.id)">Buy</a>
+      <a class="btn btn-primary" (click)="onViewDetail(product.id)">Update</a>
+      <a style="margin-left:20px" class="btn btn-primary" (click)="delete(product.id)">Delete</a>
     </div>
   </div>
+
+  <!--a class="btn btn-primary" (click)="add()">Add</a-->
 
 </div>
 

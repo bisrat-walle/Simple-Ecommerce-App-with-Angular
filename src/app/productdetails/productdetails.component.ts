@@ -28,12 +28,16 @@ export class ProductdetailsComponent implements OnInit {
 
     
   updateProduct(f: NgForm){
-
     let n = f.value;
     this.selectedProduct.name = n.name;
     this.selectedProduct.price = n.price;
     this.router.navigateByUrl("");
-     
   }
+
+  delete(id: number){
+    delete PRODUCTS[id-1];
+  }
+
+  
 
 }

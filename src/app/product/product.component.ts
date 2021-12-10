@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PRODUCTS } from './product.object';
+import { ProductdetailsComponent } from '../productdetails/productdetails.component';
+import { Product, PRODUCTS } from './product.object';
 
 @Component({
   selector: 'app-product',
@@ -19,9 +20,16 @@ export class ProductComponent implements OnInit {
     this.router.navigateByUrl('/products/detail/' + id); // ‘id’ is called parameter
   }
 
-   updateProduct(){
-     
-   }
+  delete(id: number){
+    let index = 0;
+    for (let product of PRODUCTS){
+      if (product.id == id){ 
+        break
+      }
+      index += 1; 
+    }
+    PRODUCTS.splice(index, 1)
+  }
 
 
   productList = PRODUCTS;

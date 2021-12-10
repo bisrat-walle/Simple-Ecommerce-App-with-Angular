@@ -8,7 +8,7 @@ export interface Product{
 
 export const PRODUCTS: Product[ ] = [
     { id: 1, name: 'Nike', price: 8, imageUrl: 'assets/pro_img.jfif', description:"Color: red and Size: 40"},
-    { id: 1, name: 'PUMA', price: 80, imageUrl: 'assets/pro_img.jfif', description:"Color: red and Size: 40"},
-    { id: 1, name: 'Addidas', price: 70, imageUrl: 'assets/pro_img.jfif', description:"Color: red and Size: 40"}
+    { id: 2, name: 'PUMA', price: 80, imageUrl: 'assets/pro_img.jfif', description:"Color: red and Size: 40"},
+    { id: 3, name: 'Addidas', price: 70, imageUrl: 'assets/pro_img.jfif', description:"Color: red and Size: 40"}
 ]
 

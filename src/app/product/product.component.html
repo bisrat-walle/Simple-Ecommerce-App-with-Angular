@@ -11,7 +11,7 @@
       <p class="card-text" *ngIf="product.price < 10">$ {{product.price}} (*On Discount)</p>
       <p class="card-text" *ngIf="product.price >= 10">$ {{product.price}} </p>
       <p class="card-text">{{product.description}}</p>
-      <a href="#" class="btn btn-primary" (click)="onViewDetail(product.id)">Buy</a>
+      <a class="btn btn-primary" (click)="onViewDetail(product.id)">Buy</a>
     </div>
   </div>
 

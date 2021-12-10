@@ -12,13 +12,16 @@ export class ProductComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log("Product Created!")
   }
 
 
   onViewDetail(id : number){
     this.router.navigateByUrl('/products/detail/' + id); // ‘id’ is called parameter
   }
+
+   updateProduct(){
+     
+   }
 
 
   productList = PRODUCTS;

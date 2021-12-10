@@ -8,3 +8,10 @@ h1{
     padding-top: 20px;
     padding-left: 20px;
 }
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}

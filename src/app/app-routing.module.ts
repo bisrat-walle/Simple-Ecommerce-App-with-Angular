@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: 'products/detail/:id',
     component: ProductdetailsComponent,
-    redirectTo: 'productdetails/productdetails.component.html'
+  },
+
+  {
+    path: '',
+    component: ProductComponent,
   },
 
 ];

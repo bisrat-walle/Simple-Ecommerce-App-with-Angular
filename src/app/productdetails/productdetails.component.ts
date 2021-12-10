@@ -8,18 +8,25 @@ import { Product, PRODUCTS } from '../product/product.object';
   styleUrls: ['./productdetails.component.css']
 })
 export class ProductdetailsComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute) { }
+  
+  products = PRODUCTS;
+  selectedProduct = PRODUCTS[0];
+  constructor(private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
       param => {
-        console.log("Hello");
+        for (let product of this.products){
+          if (product.id == param['id']){ this.selectedProduct = product; }
+        }
+
       })
     }
 
     
   updateProduct(){
+
+    
      
   }
 

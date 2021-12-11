@@ -4,6 +4,25 @@
     grid-row-gap: 50px;
 }
 
+@media screen and (max-width:1000px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        grid-row-gap: 50px;
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        max-width: 400px;
+        margin: auto;
+    }
+}
+
 h1{
     padding-top: 20px;
     padding-left: 20px;
@@ -16,4 +35,7 @@ body{
     overflow-x: hidden;
 }
 
-
+.card:hover{
+    transform: scale(1.1);
+    transition-duration: 400ms;
+}

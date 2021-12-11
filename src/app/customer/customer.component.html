@@ -32,8 +32,9 @@
                                         <th class="text-center" scope="col">Edit</th>
                                     </tr>
                                 </thead>
-                                <h1 *ngIf="customerList.length == 0">No customers yet!</h1>
                                 <tbody>
+                                    
+                                    <h1 *ngIf="customerList.length == 0">No customers yet!</h1>
                                     <tr class="inner-box" *ngFor="let customer of customerList">
                                         <th scope="row">
                                             <div class="event-date">

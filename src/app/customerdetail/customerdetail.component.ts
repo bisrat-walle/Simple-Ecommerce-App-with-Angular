@@ -23,11 +23,13 @@ export class CustomerdetailComponent implements OnInit {
         } else{
           document.getElementById("update")?.classList.remove("hide");
           document.getElementById("add")?.classList.add("hide");
-
           
             for (let customer of CUSTOMERS){
               if (customer.id == param['id']){ this.selectedCustomer = customer; }
             }
+            document.querySelector('#exampleInputEmail1')?.setAttribute('placeholder', this.selectedCustomer.name);
+            document.querySelector('#exampleInputPassword1')?.setAttribute('placeholder', this.selectedCustomer.email);
+  
 
         }
 

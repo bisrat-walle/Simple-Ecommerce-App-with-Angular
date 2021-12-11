@@ -1,3 +1,23 @@
 *{
     box-sizing: border-box;
 }
+
+button.nav-link {
+    border: none;
+    background-color: white;
+}
+
+ul.navbar-nav.mr-auto li {
+    font-family: fantasy;
+    border: 2px solid;
+    margin-right: 20px;
+}
+
+ul.navbar-nav.mr-auto li:hover {
+    color: aqua;
+    transform: scale(1.1);
+}
+
+ul.navbar-nav.mr-auto{
+    margin-left: 20px;
+}
